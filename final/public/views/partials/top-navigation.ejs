@@ -1,0 +1,43 @@
+<div class="topnav">
+  <a <%if(active=="Home"){%>class="active"<%}%> href="/"><span class="material-icons">home</span>Home</a>
+  <a <%if(active=="News"){%>class="active"<%}%> href="/news"><span class="material-icons">article</span>News</a>
+  <a <%if(active=="Races"){%>class="active"<%}%> href="/races"><span class="material-icons">leaderboard</span>Races</a>
+  <a <%if(active=="Drivers"){%>class="active"<%}%> href="/drivers"><span class="material-icons">sports_motorsports</span>Drivers</a>
+  <a <%if(active=="Teams"){%>class="active"<%}%> href="/teams"><span class="material-icons">groups</span>Teams</a>
+  <a <%if(active=="Telemetry-Speed"){%>class="active"<%}%> href="/telemetry-speed"><span class="material-icons">info</span>Telemetry Speed</a>
+  <a <%if(active=="Telemetry-Gear"){%>class="active"<%}%> href="/telemetry-gear"><span class="material-icons">info</span>Telemetry Gear</a>
+  <a <%if(active=="Users"){%>class="active"<%}%> href="/users"><span class="material-icons">group</span>Users</a>
+  <a <%if(active=="Admin"){%>class="active"<%}%> href="/admin"><span class="material-icons">info</span>Admin</a>
+  <div class="account-container">
+    <% if(token){ %>
+      <% if(username){ %>
+      <a href="/profile">
+        <button class="center" type="submit">
+          <i class="fa fa-user" style="color: red" aria-hidden="true"></i>
+        </button>
+      </a>
+      <label for="profile"><%=username%><label>
+      <% } %>
+      <a href="/logout">
+        <button class="center" type="submit">
+          <i class="fa fa-sign-out" style="color: red" aria-hidden="true"></i>
+        </button>
+      </a>
+    <% } else{ %>
+      <label for="login">Login</label>
+      <a href="/login">
+        <button class="center" type="submit">
+          <i class="fa fa-user" style="color: red" aria-hidden="true"></i>
+        </button>
+      </a>
+   <% } %>
+  </div>
+<!--   <div class="search-container">
+    <form action="/search" method="POST">
+      <input type="text" placeholder="Search.." name="search" />
+      <button type="submit">
+        <i class="fa fa-search" style="color: red" aria-hidden="true"></i>
+      </button>
+    </form>
+  </div> -->
+</div>

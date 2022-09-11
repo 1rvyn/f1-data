@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-2.png");
+    }
+  </style>
+  <header><%- include('../partials/head')%></header>
+  <body>
+    <nav><%- include('../partials/top-navigation', {active: "Users"})%></nav>
+    <div class="users-container">
+      <h1>Users</h1>
+      <ul></ul>
+    </div>
+    <footer><%- include('../partials/footer')%></footer>
+    <script src="js/users.js"></script>
+  </body>
+</html>

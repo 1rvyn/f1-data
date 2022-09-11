@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-7.png");
+    }
+  </style>
+  <nav><%- include('../partials/head')%></nav>
+  <body>
+    <nav><%- include('../partials/top-navigation', {active: "Races"})%></nav>
+    <div class="mainDiv">
+      <h1>Races</h1>
+      <p>
+        Here you can find Race info such as the circuit name, the date, the
+        time, circuit ID, and country.
+      </p>
+      <div id="racesContent">
+        <p>RACE INFO:</p>
+        <ul id="racesData"></ul>
+      </div>
+    </div>
+    <footer><%- include('../partials/footer')%></footer>
+  </body>
+</html>

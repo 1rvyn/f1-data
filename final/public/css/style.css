@@ -1,0 +1,587 @@
+/*
+===================
+HTML Responsiveness
+===================
+*/
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+==========================================
+Body Styling, Headings, and Paragraph Text
+==========================================
+*/
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: verdana;
+  font-size: 400%;
+  padding: 5px;
+}
+
+h2 {
+  color: black;
+  font-family: verdana;
+  font-size: 150%;
+}
+
+p {
+  color: black;
+  text-align: center;
+  font-family: verdana;
+  font-size: 150%;
+  padding: 5px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+/*
+==============
+Material Icons
+==============
+*/
+
+.material-icons {
+  margin-right: 2px;
+}
+
+/*
+==================
+Top Navigation Bar
+==================
+*/
+
+.topnav {
+  overflow: hidden;
+  background-color: red;
+}
+
+/* Nav Bar Links */
+.topnav a {
+  float: left;
+  display: flex;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 35px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Nav Bar Link - Hover Transition Effect */
+.topnav a,
+.topnav a:after,
+.topnav a:before {
+  transition: all 0.5s;
+}
+
+/* Nav Bar Link - Hover Colour-Change Effect */
+.topnav a:hover {
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+}
+
+/* Nav Bar - Current Active Link */
+.topnav a.active {
+  background-color: darkred;
+  color: white;
+}
+
+/* Nav Bar - Search Bar Input */
+.topnav input[type="text"] {
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+}
+
+/* Nav Bar - Account Container */
+.topnav .account-container {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 17px;
+  align-items: center;
+}
+
+/* Nav Bar - Account Container Link */
+.topnav .account-container a {
+  padding: 0px;
+}
+
+/* Nav Bar Account Container Link - Hover Colour-Change Effect */
+.topnav .account-container a:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Nav Bar Account Container - Button */
+.topnav .account-container button {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Nav Bar Account Container Button - Hover Colour-Change Effect */
+.topnav .account-container button:hover {
+  background: #ccc;
+}
+
+/* Nav Bar - Search Bar */
+.topnav .search-container {
+  float: right;
+  text-align: center;
+}
+
+/* Nav Bar Search Bar - Button */
+.topnav .search-container button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Nav Bar Search Bar Button - Hover Colour-Change Effect */
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+/*
+=================================================
+Media Screen Configuration for Top Navigation Bar
+=================================================
+*/
+
+@media screen and (max-width: 600px) {
+  /* Nav Bar Search Container */
+  .topnav .search-container {
+    float: none;
+  }
+  /* Nav Bar Links, Search Bar Input, and Search Container Button */
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  /* Nav Bar Search Bar Input */
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
+  }
+}
+
+/*
+===================
+Pagination
+===================
+*/
+
+/* Pagination */
+.pagination {
+  display: inline-block;
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+/* Pagination Link */
+.pagination a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Pagination Active Link */
+.pagination a.active {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* Pagination Link Hover Selector */
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  color: black;
+}
+
+/* News Lanes for Main Page Content */
+.news-lanes {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+================================================
+Media Screen Configuration for Main Page Content
+================================================
+*/
+
+@media (min-width: 48rem) {
+  /* News Content Lanes */
+  .news-lanes {
+    flex-direction: row;
+    overflow-x: hidden;
+  }
+
+  /* Image Circle */
+  .img-circle {
+    width: 150px;
+  }
+
+  /* Columns for the News Lanes */
+  .news-lanes-column {
+    border: 1px solid #484848;
+    min-width: 15rem;
+    flex: 1;
+    background: #ffffff41;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  /* News Lanes - Heading 2 */
+  .news-lanes-column h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  /* News Lanes - List */
+  .news-lanes-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* News Lanes - List Item */
+  .news-lanes-list-item {
+    list-style-type: none;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.25rem;
+  }
+
+  /* Div for Home Page */
+  .homeDiv {
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+  }
+
+  /* Main */
+  main {
+    padding: 10px;
+    margin: 0 auto;
+    width: 30%;
+  }
+
+  /* Home Div - Unordered Lists */
+  .homeDiv ul {
+    list-style: none;
+    background: #ffffff00;
+    padding: 25px;
+    padding-top: 5px;
+  }
+
+  /* Home Div Unordered Lists - List Items */
+  .homeDiv ul li {
+    background: white;
+    border: 1px solid #484848;
+    border-radius: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  /* Paragraph Text for News Lanes within Home Div */
+  .homeDiv .news-lanes p {
+    font-family: verdana;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* Div for Main Content of the Sub Pages */
+  .mainDiv {
+    padding: 10px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+  }
+
+  /* Main Div - Unordered Lists */
+  .mainDiv ul {
+    list-style: none;
+    background: #ffffff41;
+    border: 1px solid #484848;
+    border-radius: 0.5rem;
+    padding: 25px;
+  }
+
+  /* Main Div Unordered Lists - List Items */
+  .mainDiv ul li {
+    background: white;
+    border: 1px solid #484848;
+    border-radius: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }
+
+  /* Drivers Data Content Layout */
+  #driversData {
+    width: auto;
+  }
+}
+
+/*
+===================
+Users
+===================
+*/
+
+.users-container {
+  background: white;
+  width: 40%;
+  margin: 30px auto auto;
+  padding: 2%;
+  border: 3px solid black;
+  border-radius: 20px;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Uogin Container Button, with Transition Effect */
+.users-container button,
+.users-container button:after,
+.users-container button:before {
+  transition: all 0.2s;
+}
+
+/* Users Container Button - Hover Colour-Change Effect */
+.users-container button:hover {
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+}
+
+/* Login Container - Primary Button */
+.users-container .edit, .delete {
+  background-color: red;
+  margin-top: 20px;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/*
+===================
+Profile
+===================
+*/
+
+.profile-container {
+  background: white;
+  width: 40%;
+  margin: 30px auto auto;
+  padding: 2%;
+  border: 3px solid black;
+  border-radius: 20px;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+}
+
+#client-username {
+  display: none;
+}
+
+/*
+===================
+Login
+===================
+*/
+
+.login-container {
+  background: white;
+  width: 30%;
+  margin: 20px auto auto;
+  padding: 2%;
+  border: 3px solid black;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Login Container Button, with Transition Effect */
+.login-container button,
+.login-container button:after,
+.login-container button:before {
+  transition: all 0.2s;
+}
+
+/* Login Container Button - Hover Colour-Change Effect */
+.login-container button:hover {
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+}
+
+/* Login Container - Form */
+.login-container form {
+  padding-bottom: 20px;
+}
+
+/* Login Container - Label */
+.login-container label {
+  padding-top: 30px;
+}
+
+/* Login Container - Login Input */
+.login-container .login-input input {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+
+/* Login Container - Centred Text */
+.login-container .text-center {
+  padding: 20px 0px 30px;
+}
+
+/* Login Container - Login Input */
+.login-container .login-input {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+/* Login Container - Primary Button */
+.login-container .primary-btn {
+  background-color: red;
+  margin-top: 20px;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/*
+==================
+Footer
+==================
+*/
+
+footer {
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: red;
+}
+
+/* Footer - Parapraph Text, Link Text */
+footer p,
+footer a {
+  float: left;
+  display: flex;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 20px 35px;
+  margin: 0px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Footer - Copyright */
+footer #footer-copyright {
+  float: left;
+}
+
+/* Footer - Social */
+footer #footer-social {
+  float: right;
+}
+
+/* Footer Link - Hover Transition Effect */
+footer a,
+footer a:after,
+footer a:before {
+  transition: all 0.5s;
+}
+
+/* Footer Link - Hover Colour-Change Effect */
+footer a:hover {
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+}
+
+/*
+====================================
+This is the Graph from the Websocket
+====================================
+*/
+
+/* Socket Response */
+#socket-response {
+  height: fit-content;
+  width: fit-content;
+}
+
+/* Image Socket */
+#img-socket {
+  height: fit-content;
+  width: fit-content;
+  max-width: 600px;
+  max-height: 300px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-3.png");
+    }
+  </style>
+  <header><%- include('../partials/head')%></header>
+  <body>
+    <nav><%- include('../partials/top-navigation', {active: "Teams"})%></nav>
+    <div class="mainDiv">
+      <h1>Teams</h1>
+      <p>
+        Here you can find Team info such as the constructor name, as well as
+        their points, position, wins, and nationality.
+      </p>
+      <div id="teamsContent">
+        <p>TEAM INFO:</p>
+        <ul id="teamsData"></ul>
+      </div>
+    </div>
+    <footer><%- include('../partials/footer')%></footer>
+  </body>
+</html>

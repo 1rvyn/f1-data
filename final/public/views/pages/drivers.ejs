@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-1.png");
+    }
+  </style>
+  <nav><%- include('../partials/head')%></nav>
+  <body>
+    <nav><%- include('../partials/top-navigation', {active: "Drivers"})%></nav>
+    <div class="mainDiv">
+      <h1>Drivers</h1>
+      <p>
+        Here you can find Driver info such as their codename, their point
+        amount, and their win amount.
+      </p>
+      <div id="driversContent">
+        <p>DRIVER INFO:</p>
+        <ul id="driversData"></ul>
+      </div>
+    </div>
+  </body>
+  <footer><%- include('../partials/footer')%></footer>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-4.png");
+    }
+  </style>
+  <nav><%- include('../partials/head')%></nav>
+  <body>
+    <nav><%- include('../partials/top-navigation', {active: "News"})%></nav>
+    <div class="mainDiv">
+      <h1>News</h1>
+      <p>
+        Find the top and latest news on Formula 1 here. You can also find
+        personalised news based on your previous browsing history.
+      </p>
+      <p>NEWS:</p>
+      <ul id="newsPageContent"></ul>
+    </div>
+    <footer><%- include('../partials/footer')%></footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-1.png");
+    }
+  </style>
+  <header><%- include('../partials/head')%></header>
+  <body>
+    <nav><%- include('../partials/top-navigation', {active: "Register"})%></nav>
+    <div class="login-container">
+      <h1 class="text-center">Register</h1>
+      <form class="login-form text-center">
+        <div class="error">
+          <span
+            class="closebtn"
+            onclick="this.parentElement.style.display"
+            ="none"
+          ></span>
+        </div>
+        <div class="login-input">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            placeholder="Username"
+            id="username"
+            name="username"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+        <button class="primary-btn" type="submit" value="register">
+          Register
+        </button>
+      </form>
+      <a href="/login">Already registered? Login</a>
+    </div>
+    <footer><%- include('../partials/footer')%></footer>
+    <script src="js/register.js"></script>
+  </body>
+</html>

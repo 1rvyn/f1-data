@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-1.png");
+    }
+  </style>
+  <header>
+    <%- include('../partials/head')%>
+  </header>
+  <body class="homeDiv">
+    <nav><%- include('../partials/top-navigation', {active: "Profile"})%></nav>
+    <div class="profile-container">
+      <h1>Hi <%= username %></h1>
+      <h3></h3>
+    </div>
+    <footer><%- include('../partials/footer')%></footer>
+    <span id="usernameJSON"><%= JSON.stringify(username); %></span>
+    <script src="js/profile.js"></script>
+  </body>
+</html>

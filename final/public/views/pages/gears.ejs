@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-6.png");
+    }
+  </style>
+  <header>
+    <%- include('../partials/head')%>
+    <script src="../../js/socket.io.min.js"></script>
+    <script src="../../js/populate.js"></script>
+    <script src="http://localhost:8080/js/image.js"></script>
+    <script>
+      const socket = io();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </header>
+  <body class="">
+    <header>
+      <%- include('../partials/top-navigation', {active: "Telemetry" })%>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="homeDiv">
+            <h1>Enter the year you want to see the data for</h1>
+            <ul>
+              <li>
+                <div id="yearHolder">
+                  <form id="yearlist" name="yearInput"></form>
+                </div>
+              </li>
+              <li>
+                <div id="raceHolder">
+                  <form id="racelist" name="raceInput"></form>
+                </div>
+              </li>
+              <li>
+                <div id="driverHolder">
+                  <form id="driverlist" name="driverInput"></form>
+                </div>
+              </li>
+              
+              <li id="socket-response">
+
+              </li>
+              <p id="error-message"></p>
+            </ul>
+
+          </div>
+
+         
+        </div>
+      </div>
+    </main>
+    <footer><%- include('../partials/footer')%></footer>
+  </body>
+</html>

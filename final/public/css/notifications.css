@@ -1,0 +1,51 @@
+/* The alert message box */
+.alert {
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+  opacity: 1;
+  transition: opacity 0.6s;
+}
+
+/* Alert - Danger */
+.alert.danger {
+  background-color: #f66359;
+}
+
+/* Alert - Success */
+.alert.success {
+  background-color: #2fb986;
+}
+
+/* Alert - Information */
+.alert.information {
+  background-color: #47a8f5;
+}
+
+/* Alert - Warning */
+.alert.warning {
+  background-color: #ffaa2c;
+}
+
+/* Error */
+.error {
+  background-color: #47a8f5;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}

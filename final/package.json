@@ -1,0 +1,26 @@
+{
+  "name": "f1",
+  "version": "1.0.0",
+  "main": "f1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node f1.js",
+    "dev": "nodemon f1.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.0.2",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.1",
+    "python-shell": "^3.0.1",
+    "socket.io": "^4.4.1"
+  },
+  "description": ""
+}

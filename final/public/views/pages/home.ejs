@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-5.png");
+    }
+  </style>
+  <header><%- include('../partials/head')%></header>
+  <body>
+    <nav><%- include('../partials/top-navigation', {active: "Home"})%></nav>
+    <div class="homeDiv">
+      <h1>F1 Hub Home</h1>
+      <p>
+        Welcome user! F1 Hub provides the most latest and accurate information
+        on the Formula 1 sport!
+      </p>
+      <h1>Latest:</h1>
+      <section class="news-lanes">
+        <div class="news-lanes-column">
+          <h2>News</h2>
+          <p>Find all the top and latest news on Formula 1 here.</p>
+          <ul class="news-lanes-list" id="news"></ul>
+        </div>
+        <div class="news-lanes-column">
+          <h2>Races</h2>
+          <p>
+            Here you can find Race info such as the circuit name, the date, the
+            time, circuit ID, and country.
+          </p>
+          <ul class="news-lanes-list" id="races"></ul>
+        </div>
+      </section>
+      <section class="news-lanes">
+        <div class="news-lanes-column">
+          <h2>Teams</h2>
+          <p>
+            Here you can find Team info such as the constructor name, as well as
+            their points, position, wins, and nationality.
+          </p>
+          <ul class="news-lanes-list" id="teams"></ul>
+        </div>
+        <div class="news-lanes-column">
+          <h2>Drivers</h2>
+          <p>
+            Here you can find Driver info such as their codename, their point
+            amount, and their win amount.
+          </p>
+          <ul class="news-lanes-list-item" id="drivers"></ul>
+        </div>
+      </section>
+    </div>
+    <footer><%- include('../partials/footer')%></footer>
+  </body>
+</html>

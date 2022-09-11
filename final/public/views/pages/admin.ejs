@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-image: url("./img/background-img-1.png");
+    }
+  </style>
+  <header><%- include('../partials/head')%></header>
+  <body>
+    <nav><%- include('../partials/top-navigation', {active: "Admin"})%></nav>
+    <div class="users-container">
+      <h1>Admin Page</h1>
+      <h2>Users</h2>
+      <ul></ul>
+    </div>
+    <footer><%- include('../partials/footer')%></footer>
+    <script src="js/admin.js"></script>
+  </body>
+</html>
